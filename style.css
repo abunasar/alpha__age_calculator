@@ -1,5 +1,4 @@
-/* style.css */
-
+/* Reset & Base */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +16,7 @@ body {
     padding: 20px;
 }
 
+/* Container */
 .container {
     width: 100%;
     max-width: 400px;
@@ -27,6 +27,7 @@ body {
     backdrop-filter: blur(8px);
 }
 
+/* Calculator Headings */
 .calculator h1 {
     font-size: 24px;
     text-align: center;
@@ -38,6 +39,7 @@ body {
     color: #ffcc00;
 }
 
+/* Input Box */
 .input-box {
     display: flex;
     flex-direction: column;
@@ -68,6 +70,7 @@ body {
     background-color: #e6b800;
 }
 
+/* Result Text */
 #result {
     text-align: center;
     font-size: 18px;
@@ -77,4 +80,54 @@ body {
 .y-text, .m-text, .d-text {
     color: #ffcc00;
     font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .calculator h1 {
+        font-size: 20px;
+    }
+
+    .calculator h1 span {
+        font-size: 16px;
+    }
+
+    .input-box input[type="date"],
+    .input-box button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+        padding: 40px 30px;
+    }
+
+    .calculator h1 {
+        font-size: 28px;
+    }
+
+    .calculator h1 span {
+        font-size: 20px;
+    }
+
+    .input-box input[type="date"],
+    .input-box button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    #result {
+        font-size: 20px;
+    }
 }
